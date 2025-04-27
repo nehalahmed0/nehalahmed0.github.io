@@ -1,0 +1,1088 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f8f9;
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif
+}
+nav ul {
+    list-style: none; /* remove bullet points */
+    margin: 0;
+    padding: 10px;
+    display: flex; /* display list items horizontally */
+    justify-content: flex-end; /* align items to the right */
+}
+  
+  nav ul li {
+    margin-left: 20px; /* add some space between list items */
+}
+nav {
+    float: right;
+    margin-right: 80px; /* add space between nav and right edge */
+  }
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+nav ul li i {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    color: #8a94a6
+    }
+  
+nav ul li span {
+    display: block;
+    font-size: 12px;
+    color: #8a94a6
+    ;
+}
+nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+form {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* add space between search bar and right edge */
+  }
+  
+  input[type="search"] {
+    width: 450px; /* adjust width of search bar */
+    height: 35px; /* adjust height of search bar */
+    padding: 10px; /* add padding to search bar */
+    border: 1px solid #ccc; /* add border to search bar */
+    border-radius: 0px; /* add rounded corners to search bar */
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff; /* blue color */
+    color: #fff; /* white text color */
+    border: none; /* remove border */
+    padding: 10px 20px; /* add padding to button */
+    border-radius: 0px; /* add rounded corners to button */
+    cursor: pointer; /* add pointer cursor */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* darker blue color on hover */
+  }
+.search-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navigation-menu{
+    display: flex;
+    align-items: Top;
+    justify-content: center;
+    float: left;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    top: 0;
+    left:150px;
+}
+#navigation-menu select {
+    margin-left: 0px;
+    padding: 7.5px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+  }
+.logo{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    float: left;
+    position: relative;
+    margin-top: -15px;
+    padding-top: 0;
+    top: 0;
+    left: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 5px 7px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-family: sans-serif;
+    top: 70px;
+    width: 100%;
+    right: -80px;
+    z-index: 2;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    position: relative;
+    margin-right: 50px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+
+
+.nav-item a:hover {
+    color: #007bff;
+}
+
+/* Dropdown Styling */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    list-style: none;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Right Side Styling */
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+.currency{
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.language{
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.container {
+    display: flex;
+    max-width: 2000px;
+    margin:  auto;
+    padding: 20px;
+    gap: 10px;
+    position: absolute;
+    left: 0px;
+    top: 120px;
+    font-family: sans-serif;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block; /* Ensures the text takes up a consistent width */
+    width: 100%; /* Makes sure the li takes the full width of the sidebar */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.sidebar ul li:hover {
+    color: #000000;
+    font-weight: bold; /* This will now not cause a shift */
+}
+
+/* Main Content */
+.main-content {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #e0f2e9;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #000;
+}
+
+.banner-text h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.banner-text button {
+    padding: 10px 20px;
+    background-color: #ffffff00;
+    border: 1px solid #00000000;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.banner-text button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Right Section */
+.right-section {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-login {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.user-info {
+    display: flex;
+    align-items: center; /* Vertically center the icon and text */
+    gap: 10px; /* Space between icon and text */
+    margin-bottom: 10px; /* Space between user-info and button */
+}
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    text-align: left; /* Align text to the left */
+}
+
+.greeting, .subtext {
+    margin: 0; /* Remove default margins to eliminate extra space */
+    font-size: 14px;
+    line-height: 1.2; /* Tighten the line height to reduce space between lines */
+}
+
+.user-login button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+}
+.user-login button:hover {
+    background-color: #0056b3;
+}
+
+.promo-card {
+    padding: 20px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.orange {
+    background-color: #ff6200;
+}
+
+.teal {
+    background-color: #4aa8b3;
+}
+.user-login img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+  .offer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+  }
+
+  .promo-block {
+    width: 20%;
+    height: 200px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: absolute;
+    top: 550px;
+    left: 40px;
+    z-index: -2;
+  }
+
+  .promo-block h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .timer-display {
+    display: flex;
+    gap: 10px;
+  }
+
+  .timer-unit {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 60px;
+  }
+
+  .timer-unit span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .timer-unit p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .items-gallery {
+    width: 70%;
+    height: 200px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: absolute;
+    top: 550px;
+    left: 350px;
+  }
+
+  .items-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .item-card {
+    text-align: center;
+    width: 18%;
+  }
+
+  .item-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .item-card p {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .item-card .promo-tag {
+    color: #ff4d4d;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .main-gallery {
+    display: flex;
+    width: 1250px;
+    height: 50px;
+    margin: -50; /* Remove the auto margin */
+    gap: 0px;
+    position: absolute; /* Fix the position relative to the viewport */
+    bottom: -250px; /* Distance from the bottom */
+    left: 60px;
+    cursor: pointer; /* Distance from the left */
+    top: 800px;
+    z-index: 3;
+}
+
+/* Left Banner */
+.banner2 {
+    flex: 1;
+    width: 10%;
+    left: -20px;
+    background-color: #f9f1e7;
+    background-image: url('sofa2.jpg'); /* Replace with your image URL */
+    padding: -15px 0px 15px 0px;
+    border-radius: 0px;
+    text-align: center;
+    position: relative;
+    height: 265px;
+    transition: background-color 0.3s ease;
+}
+
+.banner2:hover {
+    background-color: #f0e4d7; /* Slightly darker background on hover */
+}
+.banner2 h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.banner2 button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth transition for button hover */
+}
+.banner2 button:hover {
+    transform: scale(1.05); /* Slightly scale up the button */
+    background-color: #f0f0f0; /* Change button background color */
+}
+
+/* Product Grid */
+.product-grid {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+.product-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for a "raised" effect */
+}
+
+.product-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for image hover */
+}
+.product-card:hover img {
+    transform: scale(1.1); /* Slightly scale up the image on hover */
+}
+
+.product-card p {
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.product-card span {
+    font-size: 14px;
+    color: #666;
+    transition: color 0.3s ease; /* Smooth transition for price color change */
+}
+.product-card:hover span {
+    color: #000; /* Make the price text darker on hover */
+}
+  .main-gallery1 {
+    display: flex;
+    width: 1250px;
+    height: 50px;
+
+    margin: -50; /* Remove the auto margin */
+    gap: 0px;
+    position: absolute; /* Fix the position relative to the viewport */
+    bottom: -550px; /* Distance from the bottom */
+    left: 60px;
+    cursor: pointer; /* Distance from the left */
+}
+
+/* Left Banner */
+.banner3 {
+    flex: 1;
+    width: 10%;
+    left: -20px;
+    background-color: #f9f1e7;
+    background-image: url('electronics.jpg'); /* Replace with your image URL */
+    padding: 0px;
+    border-radius: 0px;
+    text-align: center;
+    position: relative;
+    height: 265px;
+    transition: background-color 0.3s ease;
+}
+
+.banner3:hover {
+    background-color: #f0e4d7; /* Slightly darker background on hover */
+}
+.banner3 h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+
+.banner3 button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth transition for button hover */
+}
+.banner3 button:hover {
+    transform: scale(1.05); /* Slightly scale up the button */
+    background-color: #f0f0f0; /* Change button background color */
+}
+
+/* Product Grid */
+.product-grid1 {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+}
+
+.product-card1 {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+.product-card1:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for a "raised" effect */
+}
+
+.product-card1 img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for image hover */
+}
+.product-card1:hover img {
+    transform: scale(1.1); /* Slightly scale up the image on hover */
+}
+
+.product-card1 p {
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.product-card1 span {
+    font-size: 14px;
+    color: #666;
+    transition: color 0.3s ease; /* Smooth transition for price color change */
+}
+.product-card1:hover span {
+    color: #000; /* Make the price text darker on hover */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    height: 350px;
+    background: linear-gradient(90deg, rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.5)), url('warehouse.jpg') no-repeat center center/cover;
+    border-radius: 0px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 1380px;
+    left: 37px;
+}
+
+.text-section {
+    max-width: 50%;
+    color: white;
+}
+
+.text-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.text-section p {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.inquiry-box {
+    background: white;
+    padding: 50px;
+    border-radius: 0px;
+    width: 45%;
+    height: 65%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduce space between elements */
+}
+
+.inquiry-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px; /* Reduce margin to match the compact design */
+    position: absolute;
+    top: 60px;
+}
+
+.inquiry-box label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+#text1{
+    width: 550px;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.inquiry-box textarea,
+.inquiry-box input,
+.inquiry-box select {
+    width: 100%;
+    height: 50px;
+    padding: -50px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    top: -26px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inquiry-box textarea {
+    display: block;
+    resize: none;
+    height: 100px;
+    width: 1500px;
+    margin-bottom: 0; /* Remove extra margin */
+}
+.inquiry-box p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.amount-group {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Align input and select vertically */
+}
+
+.amount-group input {
+    flex: 1;
+    padding: 10px;
+}
+
+.amount-group select {
+    flex: 0.4; /* Reduce the width of the dropdown */
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: white;
+    appearance: auto; /* Ensure dropdown arrow is visible */
+}
+
+.inquiry-box button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px; /* Add slight spacing above the button */
+}
+
+.inquiry-box button:hover {
+    background: #0056b3;
+}
+.btninquiry{
+    position: relative;
+    top: -30px;
+    max-width: 200px;
+}
+.clothing {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping to new rows */
+    justify-content: center; /* Distributes items evenly */
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.product1:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for a "raised" effect */
+}
+
+
+.product1{
+    width:100%;
+    height: 250px;
+background-color:white;
+text-align: center;
+padding: 15px ;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 0px 5px 5px gray;
+z-index: 3;
+position: relative;
+top: 1870px;
+left: -483px;
+
+
+}
+.product1 img{
+    width: 150px;
+    height: 150px;
+    transform: scale(1.3);
+padding: 15px 23px 15px 23px;}
+
+
+
+.clothing1 {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping to new rows */
+    justify-content: center; /* Distributes items evenly */
+    align-items: center;
+    position: relative;
+    left: 3px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.product2:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for a "raised" effect */
+}
+
+.product2{
+    width:200px;
+    height: 250px;
+background-color:white;
+text-align: center;
+padding: 13.5px ;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 0px 5px 5px gray;
+z-index: 3;
+position: relative;
+top: 1770px;
+
+
+
+}
+.product2 img{
+    width: 120px;
+    height: 150px;
+    transform: scale(1.3);
+padding: 15px 10px 15px 10px;}
+
+#recitems{
+    position: relative;
+    top: 1500px;
+    left: 25px;
+}
+#extraservice   {
+    position: relative;
+    top: 1750px;
+    left: 25px;
+}
+.extraservice1{
+    width:300px;
+    height: 200px;
+background-color:white;
+text-align: center;
+padding: 0px ;
+margin: 0px;
+border-radius: 5px;
+box-shadow: 0px 5px 5px gray;
+z-index: 3;
+position: relative;
+top: 1750px;
+left: 0px;
+margin: 15px;
+
+}
+.extraservice1 img{
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    opacity: 0.7;
+
+
+}
+.card1 {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping to new rows */
+    justify-content: center; /* Distributes items evenly */
+    align-items: center;
+    position: relative;
+    left: 3px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.extraservice1:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for a "raised" effect */
+
+}
+.extraservice1 img:hover{
+    opacity: 1;
+}
+#Suppliers{
+    position: relative;
+    top: 1750px;
+    left: 480px;
+    font-size: 40px;
+}
+.suppliers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: 1750px;
+    left: 0px;
+
+  }
+
+  .suppliers1 {
+    flex: 0 0 18%; /* Approximately 1/5th of the container width, minus gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+  }
+
+  .suppliers1 img {
+    width: 100%;
+    max-width: 100px; /* Limit image size for consistency */
+    height: auto;
+    border-radius: 5px;
+    z-index: 3;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  .suppliers1 img:hover{
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+
+  .suppliers1 p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    text-transform: capitalize;
+  }
+  .newsletter-section {
+    background-color: #d4e0f8;
+    padding: 20px;
+    text-align: center;
+    border: 0px solid #d8b4fe;
+    position: relative;
+    top: 1830px;
+    left: 0px;
+    margin: 0px;
+    border-radius: 5px;
+}
+.newsletter-section p {
+    margin: 0 0 15px;
+    color: #333;
+}
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.email-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.email-input input {
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+.email-input::before {
+    content: '✉️';
+    position: absolute;
+    left: 10px;
+    color: #888;
+}
+.subscribe-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.subscribe-btn:hover {
+    background-color: #2563eb;
+}
+.footer {
+    background-color: #f0f5ff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 3;
+    position: relative;
+    top: 1830px;
+}
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+    margin: 10px 0;
+}
+.footer-column h3 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 16px;
+}
+.footer-column p {
+    margin: 0 0 10px;
+    color: #666;
+    font-size: 14px;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+.footer-column ul li a:hover {
+    color: #000;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}
+.app-buttons {
+    display: flex;
+    gap: 10px;
+}
+.app-buttons img {
+    width: 100px;
+    height: auto;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border: none;
+    background-color: #ffffff;
+    position: relative;
+    top: 1830px;
+}
+.footer-bottom p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.language-selector img {
+    width: 20px;
+    height: 20px;
+}
+.language-selector select {
+    border: none;
+    background: transparent;
+    color: #666;
+    font-size: 14px;
+}
